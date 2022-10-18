@@ -1,0 +1,91 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Задача 1");
+      Scanner sc = new Scanner(System.in);
+      int O = sc.nextInt();
+      System.out.printf("Очки команды - %d\n", O);
+      System.out.print("Результат игры - ");
+      switch(O) {
+        case 0:
+          System.out.println("Проигрыш");
+          break;
+        case 1:
+          System.out.println("Ничья");
+          break;
+        case 2:
+          System.out.println("Выигрыш");
+          break;
+        default:
+          System.out.println("Некорректное количество очков");
+          break;
+      }
+      
+      System.out.println(" ");
+      
+      System.out.println("Задача 2");
+      double R = sc.nextDouble();
+      double A = sc.nextDouble();
+      double Skr = Math.PI * R * R;
+      double Skv = A * A;
+      System.out.printf("Радиус круга = %.2f, сторона квадрата = %.2f\n", R, A);
+      System.out.printf("Площадь круга = %.3f, площадь квадрата = %.3f\n", Skr, Skv);
+      if(Skr > Skv) {
+        System.out.println("Площадь больше у круга");
+      }  
+      else {
+        System.out.println("Площадь больше у квадрата");
+      }
+      
+      System.out.println(" ");
+      
+      System.out.println("Задача 3");
+      int DVnumber = sc.nextInt();
+      int sum = DVnumber/10 + DVnumber%10;
+      System.out.printf("Число - %d\n", DVnumber);
+      if(DVnumber/10 > 10 || DVnumber/10 < 1) {
+        System.out.println("Некорректное число");
+      }
+      else {
+        System.out.printf("Сумма цифр = %d - ", sum);
+      if(sum/10 > 0) {
+        System.out.println("двузначное число");
+      }
+      else {
+        System.out.println("недвузначное число");
+      }
+      }
+      
+      System.out.println(" ");
+      
+      System.out.println("Задача 4");
+      double number1 = sc.nextDouble();
+      double number2 = sc.nextDouble();
+      System.out.printf("Первое число - %.2f, второе число - %.2f\n", number1, number2);
+      if(Math.sqrt(number2) < number1) {
+        System.out.printf("Второе число = %.2f\n", number2 * 5);
+      }
+      
+      System.out.println(" ");
+      
+      System.out.println("Задача 5");
+      double a = sc.nextDouble();
+      double b = sc.nextDouble();
+      double c = sc.nextDouble();
+      System.out.printf("Число 1 = %.2f, число 2 = %.2f, число 3 = %.2f\n", a, b, c);
+      if((a < b) && (b < c)) {
+        System.out.printf("Неравенство %.2f < %.2f < %.2f выполняется\n", a, b, c);
+      }
+      else {
+        System.out.printf("Неравенство %.2f < %.2f < %.2f не выполняется\n", a, b, c);
+      }
+      if((b > a) && (a > c)) {
+        System.out.printf("Неравенство %.2f > %.2f > %.2f выполняется\n", b, a, c);
+      }
+      else {
+        System.out.printf("Неравенство %.2f > %.2f > %.2f не выполняется\n", b, a, c);
+      }
+      
+  }
+}
