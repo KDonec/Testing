@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner (System.in);
+      
+      System.out.println("Задача 1");
+      int number = sc.nextInt();
+      int count = sc.nextInt();
+      int a = 0;
+      while (a<count) {
+      System.out.println(number);
+      a++;
+      }
+      
+      System.out.println(" ");
+      
+      System.out.println("Задача 2");
+      double b = 25;
+      while (b<36) {
+        System.out.printf("%.0f   %.1f   %.1f\n", b, b+0.5, b-0.2);
+        b++;
+      }
+      
+      System.out.println(" ");
+      
+      System.out.println("Задача 3");
+      double w = 1;
+      while (w<11) {
+        System.out.printf("%.0f фунт\t = %.3f килограмм\n", w, w*0.453);
+        w++;
+      }
+      
+      System.out.println(" ");
+      
+      System.out.println("Задача 4");
+      int n = sc.nextInt();
+      double znam = 1;
+      double sum = 0;
+      while (znam<=n) {
+        sum = sum + 1/znam;
+        znam++;
+      }
+      System.out.printf("Сумма дробей = %.4f\n", sum);
+      
+  }
+}
