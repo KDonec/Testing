@@ -5,13 +5,16 @@ public class Main {
       Scanner sc= new Scanner (System.in);
       
       System.out.println("Задача 1");
-      int number = sc.nextInt();
+      double number = sc.nextDouble();
       int count = sc.nextInt();
       int a = 0;
+      if (count>0) {
       while (a<count) {
       System.out.println(number);
       a++;
       }
+      }
+      else System.out.println("Некорректное количество печати числа");
       
       System.out.println(" ");
       
@@ -37,11 +40,14 @@ public class Main {
       int n = sc.nextInt();
       double znam = 1;
       double sum = 0;
+      if (n>0) {
       while (znam<=n) {
         sum = sum + 1/znam;
         znam++;
       }
       System.out.printf("Сумма дробей = %.4f\n", sum);
+      }
+      else System.out.println("Некорректное значение знаменателя");
       
   }
 }
