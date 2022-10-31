@@ -1,0 +1,99 @@
+// Задача 1
+
+import java.util.Scanner;
+
+public class Main {
+    public static boolean Chet(int n) {
+      if (n%2==0)
+        return true;
+      else
+        return false;
+    }
+    
+    public static void printChet(int n) {
+      if (n>0) {
+        if (Chet(n)==true)
+          System.out.printf("Число %d четное",n);
+        else
+          System.out.printf("Число %d нечетное",n);
+      }
+      else
+        System.out.println("Некорректное натуральное число!");
+    }
+    
+    public static void main(String[] args) {
+      Scanner sc= new Scanner (System.in);
+      System.out.println("Задача 6-1 ДЗ");
+      int a = sc.nextInt();
+      printChet(a);
+  }
+}
+
+
+// Задача 2
+
+import java.util.Scanner;
+
+public class Main {
+    public static double Prize(int a) {
+      if ((a>=40000)&&(a<80000)) 
+        return a*0.7;
+      else {
+        if (a<40000)
+          return a*0.5;
+        else
+          return a*1.1;
+      }
+    }
+    
+    public static void printPrize (int a) {
+      if (a>0)
+        System.out.printf("Премия составит %.2f", Prize(a));
+      else
+        System.out.println("Введите корректное значение зарплаты");
+    }
+    
+    public static void main(String[] args) {
+      Scanner sc= new Scanner (System.in);
+      System.out.println("Задача 6-2 ДЗ");
+      int a = sc.nextInt();
+      System.out.printf("Зарплата сотрудника - %d\n",a);
+      printPrize(a);
+  }
+}
+
+
+// Задача 3
+
+import java.util.*;
+
+public class Main {
+    public static double Step(byte n, byte m) {
+      return Math.pow(n,m);
+    }
+    
+    public static double Step(short n, short m) {
+      return Math.pow(n,m);
+    }
+    
+    public static double Step(int n, int m) {
+      return Math.pow(n,m);
+    }
+    
+    public static double Step(long n, long m) {
+      return Math.pow(n,m);
+    }
+    
+    public static double Step(float n, float m) {
+      return Math.pow(n,m);
+    }
+    
+    public static double Step(double n, double m) {
+      return Math.pow(n,m);
+    }
+    
+    public static void main(String[] args) { 
+      System.out.println("Задача 6-3 ДЗ");
+      System.out.println(Step(-5.5,-3));
+  }
+}
