@@ -16,7 +16,7 @@ public class Main {
       }
       else System.out.println("Некорректное количество печати числа");
       
-      System.out.println(" ");
+      System.out.println();
       
       System.out.println("Задача 2");
       double b = 25;
@@ -25,7 +25,7 @@ public class Main {
         b++;
       }
       
-      System.out.println(" ");
+      System.out.println();
       
       System.out.println("Задача 3");
       double w = 1;
@@ -34,7 +34,7 @@ public class Main {
         w++;
       }
       
-      System.out.println(" ");
+      System.out.println();
       
       System.out.println("Задача 4");
       int n = sc.nextInt();
