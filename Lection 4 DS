@@ -22,7 +22,7 @@ public class Main {
           break;
       }
       
-      System.out.println(" ");
+      System.out.println();
       
       System.out.println("Задача 2");
       double R = sc.nextDouble();
@@ -38,7 +38,7 @@ public class Main {
         System.out.println("Площадь больше у квадрата");
       }
       
-      System.out.println(" ");
+      System.out.println();
       
       System.out.println("Задача 3");
       int DVnumber = sc.nextInt();
@@ -57,7 +57,7 @@ public class Main {
       }
       }
       
-      System.out.println(" ");
+      System.out.println();
       
       System.out.println("Задача 4");
       double number1 = sc.nextDouble();
@@ -67,7 +67,7 @@ public class Main {
         System.out.printf("Второе число = %.2f\n", number2 * 5);
       }
       
-      System.out.println(" ");
+      System.out.println();
       
       System.out.println("Задача 5");
       double a = sc.nextDouble();
