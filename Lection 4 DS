@@ -44,19 +44,25 @@ public class Main {
       int DVnumber = sc.nextInt();
       int sum = DVnumber/10 + DVnumber%10;
       System.out.printf("Число - %d\n", DVnumber);
-      if(DVnumber/10 > 10 || DVnumber/10 < 1) {
-        System.out.println("Некорректное число");
-      }
-      else {
+      System.out.println("Задача 3");
+      int DVnumber = sc.nextInt();
+      int sum = DVnumber/10 + DVnumber%10;
+      System.out.printf("Число - %d\n", DVnumber);
+      if(DVnumber/10 < 10 && DVnumber/10 >= 1) {
         System.out.printf("Сумма цифр = %d - ", sum);
-      if(sum/10 > 0) {
-        System.out.println("двузначное число");
-      }
-      else {
+        if(sum/10 > 0) 
+          System.out.println("двузначное число");
+        else
         System.out.println("недвузначное число");
-      }
-      }
       
+      if(sum > DVnumber) 
+        System.out.printf("Сумма цифр %d > числа %d", sum, DVnumber);
+      else 
+        System.out.printf("Сумма цифр %d < числа %d\n", sum, DVnumber);
+      }
+      else
+      System.out.println("Некорректное число");
+            
       System.out.println();
       
       System.out.println("Задача 4");
