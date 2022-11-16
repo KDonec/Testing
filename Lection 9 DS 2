@@ -1,0 +1,173 @@
+// https://onecompiler.com/java/3ynyz6x2x
+/*Лекция 9 ДЗ 2 № 1. 
+Дан массив. Определить:
+1. количество максимальных элементов в массиве;
+2. количество минимальных элементов в массиве. */
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static double[] scanArray(int length) {
+      double[] array = new double [length];
+      Scanner sc= new Scanner (System.in);
+        for (int i = 0; i < array.length; i++)
+          array[i] = sc.nextDouble();
+        return array;
+    }
+    
+    public static double[] generArray(int length) {
+      double[] array = new double [length];
+      Random r = new Random();
+        for (int i = 0; i < array.length; i++) 
+          array[i] = r.nextDouble(100)-50;
+        return array;
+    }
+    
+    public static double maxElemArray(double[] array) {       //максимум
+      double max = array[0];
+      for (int i = 0; i < array.length; i++)
+        if (array[i] > max) 
+          max = array[i];
+      return max;
+    }
+    
+    public static int countMaxElemArray(double[] array) {     //кол-во максимумов
+      int countmax = 0;
+      double max = maxElemArray(array);
+      for (int i = 0; i < array.length; i++)
+        if (array[i] == max)
+          countmax = countmax + 1;             
+      return countmax;
+    }
+    
+    public static double minElemArray(double[] array) {       //минимум
+      double min = array[0];
+      for (int i = 0; i < array.length; i++)
+        if (array[i] < min) 
+          min = array[i];
+      return min;
+    }
+    
+    
+    public static int countMinElemArray(double[] array) {     //кол-во минимумов
+      int countmin = 0;
+      double min = minElemArray(array);
+      for (int a = 0; a < array.length; a++) 
+        if (array[a] == min)
+          countmin = countmin + 1;               
+      return countmin;
+    }
+    
+    public static void printArray(double[] array) {
+      for (int i = 0; i < array.length; i++) {
+        System.out.printf("%.3f ", array[i]);
+        if ((i+1) % 4 == 0)
+        System.out.println();
+      }
+      System.out.println();
+    }
+    
+    public static void main(String[] args) {
+      System.out.println("Задача 9-2-1 ДЗ");
+      
+      double[] array = generArray(8);
+      printArray(array);
+      System.out.println("Максимальный элемент массива = " + maxElemArray(array));
+      System.out.println("Количество максимальных элементов = " + countMaxElemArray(array));
+      System.out.println("Минимальный элемент массива = " + minElemArray(array));
+      System.out.println("Количество минимальных элементов = " + countMinElemArray(array));
+      
+      System.out.println();
+      
+      double[] array2 = scanArray(10);
+      printArray(array2);
+      System.out.println("Максимальный элемент массива = " + maxElemArray(array2));
+      System.out.println("Количество максимальных элементов = " + countMaxElemArray(array2));
+      System.out.println("Минимальный элемент массива = " + minElemArray(array2));
+      System.out.println("Количество минимальных элементов = " + countMinElemArray(array2));
+  }
+}
+
+
+// https://onecompiler.com/java/3yp4mp65a
+/*Лекция 9 ДЗ 2 № 2. 
+Составить программу:
+1. нахождения минимального значения среди элементов любой строки 
+двумерного массива;
+2. нахождения максимального значения среди элементов любого столбца 
+двумерного массива. */
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static double[][] scanArray(int a, int b) {
+      double[][] array = new double [a][b];
+      Scanner sc= new Scanner (System.in);
+        for (int i = 0; i < array.length; i++)
+          for (int j = 0; j < array[i].length; j++)
+            array[i][j] = sc.nextDouble();
+        return array;
+    }
+    
+    public static double[][] generArray(int a, int b) {
+      double[][] array = new double [a][b];
+      Random r = new Random();
+        for (int i = 0; i < array.length; i++)
+          for (int j = 0; j < array[i].length; j++)
+            array[i][j] = r.nextDouble(100)-50;
+        return array;
+    }
+    
+    public static double minElemStrArray(double[][] array, int numberStr) {   //минимум
+      if (numberStr >= 0 && numberStr <= array.length-1) {
+        double min = array[numberStr][0];
+        for (int j = 0; j < array.length; j++)
+          if (array[numberStr][j] < min) 
+            min = array[numberStr][j];
+        return min;
+      }
+      else 
+        return 0;
+    }
+    
+    public static double maxElemStlArray(double[][] array, int numberStl) {   //максимум
+      if (numberStl >= 0 && numberStl <= array.length-1) {
+        double max = array[0][numberStl];
+        for (int i = 0; i < array.length; i++)
+          if (array[i][numberStl] > max) 
+            max = array[i][numberStl];
+        return max;
+      }
+      else 
+        return 0;
+    }
+    
+    public static void printArray(double[][] array) {
+      for (int i = 0; i < array.length; i++) {
+        for (int j = 0; j < array[i].length; j++) 
+          System.out.printf("%.3f ", array[i][j]);
+        System.out.println();
+      }
+      System.out.println();
+    }
+    
+    public static void main(String[] args) {
+      System.out.println("Задача 9-2-2 ДЗ");
+      int numberStr = 2;
+      int numberStl = 3;
+      
+      double[][] array = generArray(4,5);
+      printArray(array);
+      System.out.printf("Минимальный элемент %d строки = %.3f\n", numberStr, minElemStrArray(array, numberStr));
+      System.out.printf("Максимальный элемент %d столбца = %.3f\n", numberStl, maxElemStlArray(array, numberStl));
+      
+      System.out.println();
+      
+      double[][] array2 = scanArray(3,3);
+      printArray(array2);
+      System.out.printf("Минимальный элемент %d строки = %.3f\n", numberStr, minElemStrArray(array2, numberStr));
+      System.out.printf("Максимальный элемент %d столбца = %.3f\n", numberStl, maxElemStlArray(array2, numberStl));      
+  }
+}
