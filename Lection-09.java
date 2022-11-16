@@ -265,7 +265,7 @@ public class Main {
       double max = maxElemArray(array);
       for (int i = 0; i < array.length; i++)
         if (array[i] == max)
-          indmax = i;               //break;
+          indmax = i;               
       return indmax;
     }
     
@@ -274,7 +274,7 @@ public class Main {
       double min = minElemArray(array);
       for (int a = 0; a < array.length; a++) 
         if (array[a] == min)
-          indmin = a;               //break;
+          indmin = a;               
       return indmin;
     }
     
@@ -292,7 +292,7 @@ public class Main {
       System.out.println("Минимальный элемент массива = " + minElemArray(array));
       System.out.println("Максимальный элемент больше минимального на " + differenElemArray(array));
       System.out.println("Индекс максимального элемента = " + indexMaxElemArray(array));
-      System.out.println("Индекс максимального элемента = " + indexMinElemArray(array));
+      System.out.println("Индекс минимального элемента = " + indexMinElemArray(array));
   }
 }
 
