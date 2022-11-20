@@ -60,11 +60,8 @@ public class Main {
     }
     
     public static void printArray(double[] array) {
-      for (int i = 0; i < array.length; i++) {
+      for (int i = 0; i < array.length; i++) 
         System.out.printf("%.3f ", array[i]);
-        if ((i+1) % 4 == 0)
-        System.out.println();
-      }
       System.out.println();
     }
     
@@ -93,10 +90,8 @@ public class Main {
 // https://onecompiler.com/java/3yp4mp65a
 /*Лекция 9 ДЗ 2 № 2. 
 Составить программу:
-1. нахождения минимального значения среди элементов любой строки 
-двумерного массива;
-2. нахождения максимального значения среди элементов любого столбца 
-двумерного массива. */
+1. нахождения минимального значения среди элементов любой строки двумерного массива;
+2. нахождения максимального значения среди элементов любого столбца двумерного массива. */
 
 import java.util.Scanner;
 import java.util.Random;
@@ -128,8 +123,10 @@ public class Main {
             min = array[numberStr][j];
         return min;
       }
-      else 
+      else {
+        System.out.println("Таких строк в массиве нет");
         return 0;
+      }
     }
     
     public static double maxElemStlArray(double[][] array, int numberStl) {   //максимум
@@ -140,8 +137,10 @@ public class Main {
             max = array[i][numberStl];
         return max;
       }
-      else 
+      else {
+        System.out.println("Таких стобцов в массиве нет");
         return 0;
+      }
     }
     
     public static void printArray(double[][] array) {
@@ -155,8 +154,8 @@ public class Main {
     
     public static void main(String[] args) {
       System.out.println("Задача 9-2-2 ДЗ");
-      int numberStr = 2;
-      int numberStl = 3;
+      int numberStr = 1;
+      int numberStl = 2;
       
       double[][] array = generArray(4,5);
       printArray(array);
@@ -168,6 +167,7 @@ public class Main {
       double[][] array2 = scanArray(3,3);
       printArray(array2);
       System.out.printf("Минимальный элемент %d строки = %.3f\n", numberStr, minElemStrArray(array2, numberStr));
-      System.out.printf("Максимальный элемент %d столбца = %.3f\n", numberStl, maxElemStlArray(array2, numberStl));      
+      System.out.printf("Максимальный элемент %d столбца = %.3f\n", numberStl, maxElemStlArray(array2, numberStl));
+      
   }
 }
