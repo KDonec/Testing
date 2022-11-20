@@ -14,19 +14,15 @@ public class Main {
     }
     
     public static void reverseArray(double[] array) {
-      for (int i = array.length-1; i >= 0; i--) {
+      for (int i = array.length-1; i >= 0; i--) 
         System.out.printf("%.3f ", array[i]);
-        if ((i+1) % 4 == 0)
-        System.out.println();
-      }
+      System.out.println();
     }
     
     public static void printArray(double[] array) {
-      for (int i = 0; i < array.length; i++) {
+      for (int i = 0; i < array.length; i++) 
         System.out.printf("%.3f ", array[i]);
-        if ((i+1) % 4 == 0)
-        System.out.println();
-      }
+      
       System.out.println();
       System.out.println();
     }
@@ -83,7 +79,7 @@ public class Main {
     public static double sum6Array(double[] array) {     // сумма первых 6 элементов
       if (array.length > 5) {
         double sum6 = 0;
-        for (int i = 0; i < 5; i++)  
+        for (int i = 0; i <= 5; i++)  
           sum6 = sum6 + array[i];
         return sum6;
       }
@@ -92,11 +88,8 @@ public class Main {
     }
     
     public static void printArray(double[] array) {
-      for (int i = 0; i < array.length; i++) {
+      for (int i = 0; i < array.length; i++) 
         System.out.printf("%.3f ", array[i]);
-        if ((i+1) % 4 == 0)
-        System.out.println();
-      }
       System.out.println();
     }
     
@@ -137,11 +130,8 @@ public class Main {
     }
     
     public static void printArray(double[] array) {
-      for (int i = 0; i < array.length; i++) {
+      for (int i = 0; i < array.length; i++) 
         System.out.printf("%.3f ", array[i]);
-        if ((i+1) % 4 == 0)
-        System.out.println();
-      }
       System.out.println();
     }
     
@@ -188,11 +178,8 @@ public class Main {
     }
     
     public static void printArray(double[] array) {
-      for (int i = 0; i < array.length; i++) {
+      for (int i = 0; i < array.length; i++) 
         System.out.printf("%.3f ", array[i]);
-        if ((i+1) % 4 == 0)
-        System.out.println();
-      }
       System.out.println();
     }
     
@@ -256,11 +243,8 @@ public class Main {
     }
     
     public static void printArray(double[] array) {
-      for (int i = 0; i < array.length; i++) {
+      for (int i = 0; i < array.length; i++) 
         System.out.printf("%.3f ", array[i]);
-        if ((i+1) % 4 == 0)
-        System.out.println();
-      }
       System.out.println();
     }
     
@@ -311,9 +295,6 @@ public class Main {
       for (int i = 0; i < array.length; i++) {
         if (array[i] >= 0)
         System.out.printf("%.2f ", array[i]);
-        
-        if ((i+1) % 4 == 0)
-        System.out.println();
       }
       System.out.println();
     }
@@ -322,19 +303,13 @@ public class Main {
       for (int i = 0; i < array.length; i++) {
         if (array[i] < 0)
         System.out.printf("%.2f ", array[i]);
-        
-        if ((i+1) % 4 == 0)
-        System.out.println();
       }
       System.out.println();
     }
     
     public static void printArray(double[] array) {
-      for (int i = 0; i < array.length; i++) {
+      for (int i = 0; i < array.length; i++) 
         System.out.printf("%.3f ", array[i]);
-        if ((i+1) % 4 == 0)
-        System.out.println();
-      }
       System.out.println();
     }
     
@@ -358,4 +333,3 @@ public class Main {
       printNegativArray(array2);
   }
 }
-
