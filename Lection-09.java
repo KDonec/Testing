@@ -82,14 +82,14 @@ public class Main {
     }
     
     public static void squareElemArray(double[] array, int n) {
-      if (n >= 0 && n <= array.length)
+      if (n >= 0 && n < array.length)
         System.out.printf("Квадратный корень %d элемента массива: √%.2f = %.3f\n", n, array[n], Math.sqrt(array[n]));
       else
         System.out.println("Некорректный номер элемента массива");
     }
     
     public static void srednTwoElemArray(double[] array, int n, int m) {
-      if (n >= 0 && n <= array.length && m >= 0 && m <= array.length)
+      if (n >= 0 && n < array.length && m >= 0 && m < array.length)
         System.out.printf("Среднее арифметическое %d и %d элементов массива: %.2f и %.2f = %.2f\n", n, m, array[n], array[m], (array[n]+array[m])/2);
       else
         System.out.println("Некорректные номера элементов массива");
@@ -540,9 +540,7 @@ public class Main {
         return array;
       }
       else {
-        for (int i = 0; i < array.length; i++) 
-          for (int j = 0; j < array[i].length; j++)
-            array[i][j] = 0;
+        System.out.println("Такой строки в массиве нет");
         return array; 
       }
     }
@@ -559,9 +557,7 @@ public class Main {
         return array;
       }
       else {
-        for (int i = 0; i < array.length; i++) 
-          for (int j = 0; j < array[i].length; j++)
-            array[i][j] = 0;
+        System.out.println("Таких стобцов в массиве нет");
         return array; 
       }
     }
